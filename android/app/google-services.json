@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "447426764590",
+    "project_id": "ozar-e2e80",
+    "storage_bucket": "ozar-e2e80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447426764590:android:10bdab251b3309fcc524bf",
+        "android_client_info": {
+          "package_name": "com.example.ozar_grocerylist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxipweQZzbxK9CV1MQNap3uKQJCzWCXg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
