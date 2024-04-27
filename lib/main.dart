@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ozar_grocerylist/auth.dart';
+import 'package:ozar_grocerylist/loginpage.dart';
 import 'package:ozar_grocerylist/widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -126,7 +128,19 @@ class _ListsScreenState extends State<ListsScreen> {
               }
             });
           } else if (index == 2) {
-            // Handle account functionality
+            //Edit:
+             Auth().signOut().then((_) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginPage()),
+    );
+  }).catchError((error) {
+    print('Signout error: $error');
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text('Error signing out. Please try again.'),
+    ));
+  });
+
           }
         },
       ),
@@ -201,7 +215,7 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
   late List<String> _groceryList;
   TextEditingController _textController = TextEditingController();
   String? _itemAddedMessage;
-  int? _editIndex; // Track the index of the item being edited
+  int? _editIndex;
  
   @override
   void initState() {
